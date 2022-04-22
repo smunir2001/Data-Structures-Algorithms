@@ -9,11 +9,23 @@ public class StaticArrayDS {
 
     public StaticArrayDS(int inputLength) {
         if (inputLength <= 0) {
-            System.out.println("\nERROR: Cannot initialize mainArray[] with inputLength = " + inputLength + ".");
+            System.out.println("ERROR: Cannot initialize mainArray[] with inputLength = " + inputLength + ".");
         } else {
-            System.out.println("\nInitializing mainArray[] to length = " + inputLength + ".");
+            System.out.println("SUCCESS: Initializing mainArray[] to length = " + inputLength + ".");
             mainArray = new int[inputLength];
             tailPointer++;
+        }
+    }
+
+    public void printArray() {
+        if (mainArray == null) {
+            System.out.println("mainArray[]: []");
+        } else {
+            System.out.print("mainArray[]: [");
+            for (int i = 0; i < mainArray.length; i++) {
+                System.out.print(mainArray[i] + ", ");
+            }
+            System.out.print("\b\b]\n");
         }
     }
 }
