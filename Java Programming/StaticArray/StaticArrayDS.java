@@ -17,6 +17,41 @@ public class StaticArrayDS {
         }
     }
 
+    public void insertAtHead(int data) {
+        if (mainArray == null || tailPointer == -1) {
+            System.out.println("\nERROR: Cannot insertAtHead(" + data + ") in uninitialized/null mainArray[].");
+        } else {
+            if (tailPointer == mainArray.length) {
+                System.out.println("\nERROR: Cannot insertAtHead(" + data + ") in full capacity mainArray[].");
+            } else {
+                System.out.println("\nSUCCESS: insertingAtHead(" + data + ") in mainArray[].");
+                mainArray = shiftRight(mainArray, tailPointer);
+                mainArray[0] = data;
+                tailPointer++;
+            }
+        }
+    }
+
+    private int[] shiftRight(int[] inputArray, int tailPointer) {
+        if (tailPointer == 1) {
+            inputArray[1] = inputArray[0];
+            inputArray[0] = 0;
+        } else {
+            for (int i = tailPointer; i >= 1; i--) {
+                inputArray[i] = inputArray[i - 1];
+            }
+        }
+        return inputArray;
+    }
+
+    private int[] shiftLeft(int[] inputArray, int tailPointer) {
+        for (int i = 0; i < tailPointer - 1; i++) {
+            inputArray[i] = inputArray[i + 1];
+        }
+        inputArray[tailPointer - 1] = 0;
+        return inputArray;
+    }
+
     public void printArray() {
         if (mainArray == null) {
             System.out.println("mainArray[]: []");
