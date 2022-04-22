@@ -32,28 +32,44 @@ public class StaticArrayDS {
         }
     }
 
+    public void removeFromHead() {
+        if (mainArray == null || tailPointer == 0 || tailPointer == -1) {
+            System.out.println("\nERROR: Cannot removeFromHead() from uninitialized/null mainArray[].");
+        } else {
+            System.out.println("\nSUCCESS: removingFromHead(" + mainArray[0] + ") from mainArray[].");
+            shiftLeft(mainArray, tailPointer);
+            tailPointer--;
+        }
+    }
+
     private int[] shiftRight(int[] inputArray, int tailPointer) {
         if (tailPointer == 1) {
             inputArray[1] = inputArray[0];
             inputArray[0] = 0;
+            return inputArray;
         } else {
             for (int i = tailPointer; i >= 1; i--) {
                 inputArray[i] = inputArray[i - 1];
             }
+            return inputArray;
         }
-        return inputArray;
     }
 
     private int[] shiftLeft(int[] inputArray, int tailPointer) {
-        for (int i = 0; i < tailPointer - 1; i++) {
-            inputArray[i] = inputArray[i + 1];
+        if (tailPointer == 1) {
+            inputArray[0] = 0;
+            return inputArray;
+        } else {
+            for (int i = 0; i < tailPointer - 1; i++) {
+                inputArray[i] = inputArray[i + 1];
+            }
+            inputArray[tailPointer - 1] = 0;
+            return inputArray;
         }
-        inputArray[tailPointer - 1] = 0;
-        return inputArray;
     }
 
     public void printArray() {
-        if (mainArray == null) {
+        if (mainArray == null || tailPointer == 0 || tailPointer == -1) {
             System.out.println("mainArray[]: []");
         } else {
             System.out.print("mainArray[]: [");

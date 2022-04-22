@@ -13,6 +13,8 @@ public class Main {
         arr0.printArray();
         arr0.insertAtHead(3); // this will report an ERROR
         arr0.printArray();
+        arr0.removeFromHead(); // this will report an ERROR
+        arr0.printArray();
 
         System.out.println("\narr1 -->");
         StaticArrayDS arr1 = new StaticArrayDS(1);
@@ -20,6 +22,10 @@ public class Main {
         arr1.insertAtHead(3);
         arr1.printArray();
         arr1.insertAtHead(22); // this will report an ERROR
+        arr1.printArray();
+        arr1.removeFromHead();
+        arr1.printArray();
+        arr1.removeFromHead(); // this will report an ERROR
         arr1.printArray();
 
         System.out.println("\narr2 -->");
@@ -36,6 +42,18 @@ public class Main {
         arr2.insertAtHead(146);
         arr2.printArray();
         arr2.insertAtHead(100); // this will report an ERROR
+        arr2.printArray();
+        arr2.removeFromHead();
+        arr2.printArray();
+        arr2.removeFromHead();
+        arr2.printArray();
+        arr2.removeFromHead();
+        arr2.printArray();
+        arr2.removeFromHead();
+        arr2.printArray();
+        arr2.removeFromHead();
+        arr2.printArray();
+        arr2.removeFromHead(); // this will report an ERROR
         arr2.printArray();
     }
 }
