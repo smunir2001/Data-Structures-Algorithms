@@ -1,9 +1,25 @@
 <!-- Headings -->
-# Static Arrays (Java Implementation)
-## Heading 2
-## Heading 3
-### Heading 4
-###### Heading 6
+# Static Array (Java Implementation)
+
+## Member variables
+* int[] mainArray
+* int tailPointer
+
+## public functions/methods
+### *public __StaticArrayDS__(int inputLength)*
+* If the inputLength <= 0, then we cannot initialize mainArray[].
+* Else: initialize mainArray[] to inputLength & increment tailPointer.
+### *public void __insertAtHead__(int data)*
+### *public void __removeFromHead__()*
+### *public void __insertAtTail__(int data)*
+### *public void __removeFromTai__l()*
+### *public void __insertAtHead__(int data)*
+### *public void __sequentialSearch__(int target)*
+### *public void __printArray__()*
+
+## private functions/methods
+### *private int[] __shiftRight__(int[] inputArray, int tailPointer)*
+### *private int[] __shiftLeft__(int[] inputArray, int tailPointer)*
 
 <!-- Italics -->
 *This text* is italic.
