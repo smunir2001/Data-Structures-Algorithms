@@ -3,20 +3,29 @@
 
 ## Member variables
 * int[] mainArray
+    * Our program's global array to be initialized and image static length/size properties.
+    * Default value = null
+    * Full CRUD implementation.
 * int tailPointer
-
+    * Counter variable to keep track of tail index and allows us to determine if the mainArray[] is full or not.
+    * Default value = -1
+---
 ## public functions/methods
 ### *public __StaticArrayDS__(int inputLength)*
-* If the inputLength <= 0, then we cannot initialize mainArray[].
-* Else: initialize mainArray[] to inputLength & increment tailPointer.
+* If the inputLength <= 0, then we cannot initialize mainArray[] & report an ERROR.
+* Else: initialize mainArray[] to inputLength & increment tailPointer++.
 ### *public void __insertAtHead__(int data)*
+* If the mainArray is uninitialized/null, then we cannot __insertAtHead()__ & report an ERROR.
+* Else: we are dealing with an initialized mainArray[]. However, we need to confirm/verify if there is enough space to __insertAtHead()__.
+    * Check if the mainArray[]'s capacity is full.
+    * If the tailPointer has not reached the end of the mainArray[] (tailPointer == mainArray.length), then __shiftRight()__ each element and insert data at mainArray[0] & increment tailPointer++.
 ### *public void __removeFromHead__()*
 ### *public void __insertAtTail__(int data)*
 ### *public void __removeFromTai__l()*
 ### *public void __insertAtHead__(int data)*
 ### *public void __sequentialSearch__(int target)*
 ### *public void __printArray__()*
-
+---
 ## private functions/methods
 ### *private int[] __shiftRight__(int[] inputArray, int tailPointer)*
 ### *private int[] __shiftLeft__(int[] inputArray, int tailPointer)*
