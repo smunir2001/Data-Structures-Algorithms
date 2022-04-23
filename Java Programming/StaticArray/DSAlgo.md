@@ -1,4 +1,3 @@
-<!-- Headings -->
 # Static Array (Java Implementation)
 
 ## Member variables
@@ -72,6 +71,19 @@
 * __Time complexity:__ O(n) --> linear time
     * The tailPointer is decremented every time we __removeFromHead()__ or __removeFromTail()__ and this function will shift every element in the mainArray[] one space to the left up until the value of the tailPointer. So when tailPointer == mainArraySize, we will have done at most n - 1 swaps! Hence, resulting in O(n - 1) or O(n) time complexity.
 ---
+## Common concepts
+### How to check if the mainArray[] is uninitialized?
+```java
+if (mainArray == null || tailPointer == -1)
+```
+### How to check if the mainArray[] is empty?
+```java
+if (tailPointer == 0)
+```
+### How to check if the mainArray[] is full?
+```java
+if (tailPointer == mainArray.length)
+```
 
 <!-- Strikethrough -->
 <!-- ~~This text~~ is strikethrough. -->

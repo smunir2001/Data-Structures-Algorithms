@@ -70,6 +70,21 @@ public class StaticArrayDS {
         }
     }
 
+    public void sequentialSearch(int target) {
+        int isFound = 0;
+        for (int i = 0; i < mainArray.length; i++) {
+            if (mainArray[i] == target) {
+                isFound = 1;
+                break;
+            }
+        }
+        if (isFound == 1) {
+            System.out.println("\nSUCCESS: target(" + target + ") found in mainArray[].");
+        } else {
+            System.out.println("\nERROR: target(" + target + ") not found in mainArray[].");
+        }
+    }
+
     private int[] shiftRight(int[] inputArray, int tailPointer) {
         if (tailPointer == 1) {
             inputArray[1] = inputArray[0];
