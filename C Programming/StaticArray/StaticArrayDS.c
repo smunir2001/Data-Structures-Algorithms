@@ -166,6 +166,8 @@ int main(int argc, char* argv[]) {
     printArray();
     insertAtTail(75);
     printArray();
+    removeFromHead();
+    printArray();
     // insertAtHead(22);
     // printArray();
     // insertAtHead(7);
