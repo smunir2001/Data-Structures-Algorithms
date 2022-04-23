@@ -33,11 +33,39 @@ public class StaticArrayDS {
     }
 
     public void removeFromHead() {
-        if (mainArray == null || tailPointer == 0 || tailPointer == -1) {
+        if (mainArray == null || tailPointer == -1) {
             System.out.println("\nERROR: Cannot removeFromHead() from uninitialized/null mainArray[].");
         } else {
             System.out.println("\nSUCCESS: removingFromHead(" + mainArray[0] + ") from mainArray[].");
             shiftLeft(mainArray, tailPointer);
+            tailPointer--;
+        }
+    }
+
+    public void insertAtTail(int data) {
+        if (mainArray == null || tailPointer == -1) {
+            System.out.println("\nERROR: Cannot insertAtTail(" + data + ") in uninitialized/null mainArray[].");
+        } else {
+            if (tailPointer == mainArray.length) {
+                System.out.println("\nERROR: Cannot insertAtTail(" + data + ") in full capacity mainArray[].");
+            } else {
+                System.out.println("\nSUCCESS: insertingAtTail(" + data + ") in mainArray[].");
+                mainArray[tailPointer] = data;
+                tailPointer++;
+            }
+        }
+    }
+
+    public void removeFromTail() {
+        if (mainArray == null || tailPointer == -1) {
+            System.out.println("\nERROR: Cannot removeFromTail() from uninitialized/null mainArray[].");
+        } else {
+            if (tailPointer == 0) {
+                System.out.println("\nERROR: Cannot removeFromTail() from empty mainArray[].");
+                return;
+            }
+            System.out.println("\nSUCCESS: removingFromTail(" + mainArray[tailPointer - 1] + ") from mainArray[].");
+            mainArray[tailPointer - 1] = 0;
             tailPointer--;
         }
     }
@@ -56,20 +84,15 @@ public class StaticArrayDS {
     }
 
     private int[] shiftLeft(int[] inputArray, int tailPointer) {
-        if (tailPointer == 1) {
-            inputArray[0] = 0;
-            return inputArray;
-        } else {
-            for (int i = 0; i < tailPointer - 1; i++) {
-                inputArray[i] = inputArray[i + 1];
-            }
-            inputArray[tailPointer - 1] = 0;
-            return inputArray;
+        for (int i = 0; i < tailPointer - 1; i++) {
+            inputArray[i] = inputArray[i + 1];
         }
+        inputArray[tailPointer - 1] = 0;
+        return inputArray;
     }
 
     public void printArray() {
-        if (mainArray == null || tailPointer == 0 || tailPointer == -1) {
+        if (mainArray == null || tailPointer == -1) {
             System.out.println("mainArray[]: []");
         } else {
             System.out.print("mainArray[]: [");
