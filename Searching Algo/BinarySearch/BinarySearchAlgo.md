@@ -2,9 +2,7 @@
 ## Overview
 * ### The binary search algorithm...
 
-## *bubbleSort()*
-
-## *swapValues()*
+## *binarySearch()*
 
 ## Time complexity
 * ### Quadratic-time complexity O(n^2)
