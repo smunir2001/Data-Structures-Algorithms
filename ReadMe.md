@@ -1,6 +1,6 @@
 # Data-Structures-Algorithms
 
-### My personal DSAlgo repo. All code/analysis is my algorithmic thinking and logic along with time/space complexity analyses.
+### My personal DSAlgo repo. All code/analysis is my own algorithmic thinking and logic along with time/space complexity analyses.
 * ### Be sure to check out all markdown (.md) files to learn about the specific data structure & algorithmic concepts.
 * ### Checkout .java and .c files to view all source code regarding specific data structure & algorithm implementations.
 
@@ -49,3 +49,14 @@ array2.insertionSort();
 * Trees
 * Heaps
 * Graphs
+
+## Completed Searching Algo
+* Linear search
+* Binary search
+
+## Need-to-Complete Searching Algo
+
+## Completed Sorting Algo
+* Bubble sort
+
+## Need-to-Complete Sorting Algo
