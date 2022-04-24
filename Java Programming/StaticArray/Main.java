@@ -39,17 +39,21 @@ public class Main {
         arr2.printArray();
         arr2.insertAtHead(1000);
         arr2.printArray();
-        arr2.removeFromTail();
+        arr2.sortAscending();
         arr2.printArray();
-        arr2.removeFromTail();
+        arr2.sortDescending();
         arr2.printArray();
-        arr2.removeFromTail();
-        arr2.printArray();
-        arr2.removeFromTail();
-        arr2.printArray();
-        arr2.removeFromTail();
-        arr2.printArray();
-        arr2.removeFromTail();
-        arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
+        // arr2.removeFromTail();
+        // arr2.printArray();
     }
 }

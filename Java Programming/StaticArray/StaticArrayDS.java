@@ -70,6 +70,22 @@ public class StaticArrayDS {
         }
     }
 
+    
+
+    public void sortDescending() {
+        System.out.println("\nSUCCESS: sorting in descending order.");
+        for (int i = 0; i < mainArray.length - 1; i++) {
+            if (mainArray[i] < mainArray[i + 1]) {
+                int temp = mainArray[i + 1];
+                mainArray[i + 1] = mainArray[i];
+                mainArray[i] = temp;
+            }
+        }
+        int temp = mainArray[1];
+        mainArray[1] = mainArray[0];
+        mainArray[0] = temp;
+    }
+
     public void sequentialSearch(int target) {
         int isFound = 0;
         for (int i = 0; i < mainArray.length; i++) {
@@ -83,6 +99,10 @@ public class StaticArrayDS {
         } else {
             System.out.println("\nERROR: target(" + target + ") not found in mainArray[].");
         }
+    }
+
+    public void binarySearch(int target) {
+        //
     }
 
     private int[] shiftRight(int[] inputArray, int tailPointer) {
