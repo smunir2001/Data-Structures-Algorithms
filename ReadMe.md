@@ -58,5 +58,10 @@ array2.insertionSort();
 
 ## Completed Sorting Algo
 * Bubble sort
+* Selection sort
 
 ## Need-to-Complete Sorting Algo
+* Merge sort
+* Insertion sort
+* Bucket sort
+* Radix sort
