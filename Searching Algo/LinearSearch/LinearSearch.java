@@ -17,6 +17,8 @@ public class LinearSearch {
         int[] array1 = {3, 22, 7, 81, 146, -59};
         System.out.println("array1[] --> " + Arrays.toString(array1));
         linearSearch(array1, 81);
+        linearSearch(array1, 3);
         linearSearch(array1, 53);
+        linearSearch(array1, -59);
     }
 }
