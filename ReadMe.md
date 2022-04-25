@@ -51,17 +51,21 @@ array2.insertionSort();
 * Graphs
 
 ## Completed Searching Algo
-* Linear search
-* Binary search
+* Linear search (Java)
 
 ## Need-to-Complete Searching Algo
+* Binary search
 
 ## Completed Sorting Algo
 * Bubble sort
 * Selection sort
+* Insertion sort
 
 ## Need-to-Complete Sorting Algo
 * Merge sort
-* Insertion sort
 * Bucket sort
 * Radix sort
+* Quick sort
+* Counting sort
+* Heap sort
+* Shell sort
