@@ -31,9 +31,10 @@ array2.insertionSort();
 ```
 
 ## Completed Data Structures & Algorithms
+* Static Arrays (Java)
+* Static Arrays (C)
 
 ## Need-to-Complete Data Structure & Algorithms
-* Static arrays
 * Dynamic arrays
 * Linkedlists
     * Singly linkedlists
