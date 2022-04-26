@@ -16,7 +16,7 @@ private static void linearSearch(int[] inputArray, int target) {
 * Traverse inputArray[] from index i = 0... n - 1 (inclusive) and check if each element is equal to the target element. If yes, we can save the location (index) in the inputArray[] at which the target element was found or we can also return a "success" message and break out of the loop and return.
 
 ## Time complexity
-* ### Linear-time complexity O(n)
+### Linear-time complexity O(n)
 * ### Best-case time complexity
     * The best case time complexity would be constant time O(1) when the target element is located at the very beginning (first index) of the inputArray[]. This means that we will not have to traverse the rest of the inputArray[] and the target element will be found in O(1) operation.
 * ### Average-case time complexity
