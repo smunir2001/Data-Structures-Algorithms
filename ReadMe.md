@@ -52,16 +52,16 @@ array2.insertionSort();
 
 ## Completed Searching Algo
 * Linear search (Java)
+* Binary search (Java)
 
 ## Need-to-Complete Searching Algo
-* Binary search
 
 ## Completed Sorting Algo
-* Bubble sort
-* Selection sort
-* Insertion sort
+* Bubble sort (Java)
 
 ## Need-to-Complete Sorting Algo
+* Selection sort
+* Insertion sort
 * Merge sort
 * Bucket sort
 * Radix sort
