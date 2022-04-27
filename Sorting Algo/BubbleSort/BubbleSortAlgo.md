@@ -27,8 +27,8 @@ private static void swapValues(int[] inputArray, int index1, int index2) {
 ## Time complexity
 ### Quadratic-time complexity O(n^2)
 * ### Best-case time complexity
-    * The best case time complexity would be when the array is already sorted which would result in a linear-time O(n) operation because we would traverse the inputArray[] taking two elements at a time and seeing if they're in the correct position.
+    * The best case time complexity would be when the array is already sorted which would result in a __linear-time O(n)__ operation because we would traverse the inputArray[] taking two elements at a time and seeing if they're in the correct position.
 * ### Average-case time complexity
-    * The average case time complexity would be O(n^2) when the array is partially sorted and we would still need to swap pairs of adjacent elements that are incorrectly ordered, resulting in a quadratic-time operation.
+    * The average case time complexity would be __O(n^2)__ when the array is partially sorted and we would still need to swap pairs of adjacent elements that are incorrectly ordered, resulting in a __quadratic-time operation__.
 * ### Worst-case time complexity
-    * The worst case time complexity would be O(n^2) when the array is reverse-sorted and we would have to swap all pairs of adjacent elements that are incorrectly ordered, resulting in a quadratic-time operation.
+    * The worst case time complexity would be __O(n^2)__ when the array is reverse-sorted and we would have to swap all pairs of adjacent elements that are incorrectly ordered, resulting in a __quadratic-time operation__.
