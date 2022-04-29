@@ -51,9 +51,7 @@
 * This function will print out each element in the mainArray[] sequentially.
 * __Time complexity:__ O(n) --> linear time
     * Sequential traversal of mainArray[] to access each element results in a linear time O(n) operation.
-
 ---
-
 ## private functions/methods
 ### *private int[] __shiftRight__(int[] inputArray, int tailPointer)*
 * This function takes the inputArray[] and the current value of the tailPointer and it will return the inputArray[] such that each data item is shifted one space to the right.
@@ -69,7 +67,6 @@
 * __Time complexity:__ O(n) --> linear time
     * The tailPointer is decremented every time we __removeFromHead()__ or __removeFromTail()__ and this function will shift every element in the mainArray[] one space to the left up until the value of the tailPointer. So when tailPointer == mainArraySize, we will have done at most n - 1 swaps! Hence, resulting in O(n - 1) or O(n) time complexity.
 ---
-
 ## Common concepts
 ### How to check if the mainArray[] is uninitialized?
 ```java

@@ -9,6 +9,10 @@ int* mainArray = NULL;
 int tailPointer = -1;
 int mainArraySize = -1;
 
+int getTailPointer() {
+    return tailPointer;
+}
+
 void initMainArray(int inputLength) {
     if (inputLength <= 0) {
         printf("ERROR: cannot initialize mainArray[] with inputLength = %d.\n", inputLength);
@@ -98,21 +102,6 @@ void removeFromTail() {
     }
 }
 
-void sequentialSearch(int target) {
-    int isFound = 0;
-    for (int i = 0; i < mainArraySize; i++) {
-        if (mainArray[i] == target) {
-            isFound = 1;
-            break;
-        }
-    }
-    if (isFound == 1) {
-        printf("\nSUCCESS: target(%d) found in mainArray[].\n", target);
-    } else {
-        printf("\nERROR: target(%d) not  found in mainArray[].\n", target);
-    }
-}
-
 void printArray() {
     if (mainArray == NULL || tailPointer == -1) {
         printf("mainArray[]: []\n");
@@ -132,52 +121,65 @@ int main(int argc, char* argv[]) {
     // printf("\narr1 -->\n");
     // initMainArray(0);
     // printArray();
-    // insertAtHead(3); // this will report an ERROR
+    // printf("tailPointer = %d\n", getTailPointer());
+    // insertAtHead(3);
     // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
+    // removeFromHead();
+    // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
+    // insertAtTail(22);
+    // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
+    // removeFromTail();
+    // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
 
     // printf("\narr2 -->\n");
     // initMainArray(1);
     // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
     // insertAtHead(3);
     // printArray();
-    // insertAtHead(22); // this will report an ERROR
+    // printf("tailPointer = %d\n", getTailPointer());
+    // removeFromHead();
     // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
+    // insertAtTail(22);
+    // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
+    // removeFromTail();
+    // printArray();
+    // printf("tailPointer = %d\n", getTailPointer());
 
     printf("\narr3 -->\n");
     initMainArray(5);
     printArray();
+    printf("tailPointer = %d\n", getTailPointer());
     insertAtHead(3);
     printArray();
+    printf("tailPointer = %d\n", getTailPointer());
     insertAtTail(22);
     printArray();
+    printf("tailPointer = %d\n", getTailPointer());
+    insertAtHead(7);
+    printArray();
+    printf("tailPointer = %d\n", getTailPointer());
+    insertAtTail(81);
+    printArray();
+    printf("tailPointer = %d\n", getTailPointer());
     removeFromHead();
     printArray();
+    printf("tailPointer = %d\n", getTailPointer());
     removeFromTail();
     printArray();
-    insertAtHead(100);
-    printArray();
-    insertAtHead(200);
-    printArray();
-    insertAtHead(300);
-    printArray();
-    insertAtTail(90);
-    printArray();
-    insertAtTail(80);
-    printArray();
-    insertAtTail(75);
-    printArray();
+    printf("tailPointer = %d\n", getTailPointer());
     removeFromHead();
     printArray();
-    // insertAtHead(22);
-    // printArray();
-    // insertAtHead(7);
-    // printArray();
-    // insertAtHead(81);
-    // printArray();
-    // insertAtHead(146);
-    // printArray();
-    // insertAtHead(100); // this will report an ERROR
-    // printArray();
+    printf("tailPointer = %d\n", getTailPointer());
+    removeFromTail();
+    printArray();
+    printf("tailPointer = %d\n", getTailPointer());
 
     return EXIT_SUCCESS;
 }
