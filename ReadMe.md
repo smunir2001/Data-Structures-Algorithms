@@ -3,6 +3,7 @@
 ### My personal DSAlgo repo. All code/analysis is my own algorithmic thinking and logic along with time/space complexity analyses.
 * ### Be sure to check out all markdown (.md) files to learn about the specific data structure & algorithmic concepts.
 * ### Checkout .java and .c files to view all source code regarding specific data structure & algorithm implementations.
+* ### Also you're welcome to view .pdf files in each DS directory that consist of my hand-written notes and diagrams for an easier understanding/learning experience.
 
 ## C Programming
 ### Check this folder to view all data structure & algorithms implementation in C.

@@ -25,8 +25,9 @@
 
 ### *public void __removeFromHead__()*
 * This function removes the element at the beginning (head) position of the mainArray[].
-    * If the mainArray is uninitialized/null OR tailPointer == 0 OR tailPointer == -1, then we cannot __removeFromHead()__ & report an ERROR.
-        * Else: We will __shiftLeft()__ and decrement the tailPointer--.
+    * If the mainArray is uninitialized/null OR tailPointer == -1, then we cannot __removeFromHead()__ & report an ERROR.
+        * If tailPointer == 0, then we cannot __removeFromHead()__ from empty mainArray so return ERROR.
+        * Else: We will __shiftLeft()__ to overwrite head element and decrement the tailPointer--.
 * __Time complexity:__ O(n) --> linear time
     * This function will require shifting elements at most n - 1 times if we want to remove from the head and maintain proper arrangement of elements inside mainArray[]. If we are dealing with single-element arrays, it will require no shifting of elements and execute in O(1) constant time.
 
@@ -46,16 +47,13 @@
 * __Time complexity:__ O(1) --> constant time
     * We already have a pointer variable to the tail element/position, so it is easy to locate and decrement tailPointer and "delete" the element at the tail position in constant time.
 
-### *public void __sequentialSearch__(int target)*
-* This function deploys a sequential search on mainArray[] looking for the specified target data.
-* __Time complexity:__ O(n) --> linear time
-    * Sequential traversal from i = 0... n - 1 reults in a linear time O(n) operation.
-
 ### *public void __printArray__()*
 * This function will print out each element in the mainArray[] sequentially.
 * __Time complexity:__ O(n) --> linear time
     * Sequential traversal of mainArray[] to access each element results in a linear time O(n) operation.
+
 ---
+
 ## private functions/methods
 ### *private int[] __shiftRight__(int[] inputArray, int tailPointer)*
 * This function takes the inputArray[] and the current value of the tailPointer and it will return the inputArray[] such that each data item is shifted one space to the right.
@@ -71,6 +69,7 @@
 * __Time complexity:__ O(n) --> linear time
     * The tailPointer is decremented every time we __removeFromHead()__ or __removeFromTail()__ and this function will shift every element in the mainArray[] one space to the left up until the value of the tailPointer. So when tailPointer == mainArraySize, we will have done at most n - 1 swaps! Hence, resulting in O(n - 1) or O(n) time complexity.
 ---
+
 ## Common concepts
 ### How to check if the mainArray[] is uninitialized?
 ```java

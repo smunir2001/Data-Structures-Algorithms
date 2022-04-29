@@ -17,6 +17,10 @@ public class StaticArrayDS {
         }
     }
 
+    public int getTailPointer() {
+        return this.tailPointer;
+    }
+
     public void insertAtHead(int data) {
         if (mainArray == null || tailPointer == -1) {
             System.out.println("\nERROR: Cannot insertAtHead(" + data + ") in uninitialized/null mainArray[].");
@@ -36,6 +40,10 @@ public class StaticArrayDS {
         if (mainArray == null || tailPointer == -1) {
             System.out.println("\nERROR: Cannot removeFromHead() from uninitialized/null mainArray[].");
         } else {
+            if (tailPointer == 0) {
+                System.out.println("\nERROR: Cannot removeFromHead() from empty mainArray[].");
+                return;
+            }
             System.out.println("\nSUCCESS: removingFromHead(" + mainArray[0] + ") from mainArray[].");
             shiftLeft(mainArray, tailPointer);
             tailPointer--;
@@ -68,41 +76,6 @@ public class StaticArrayDS {
             mainArray[tailPointer - 1] = 0;
             tailPointer--;
         }
-    }
-
-    
-
-    public void sortDescending() {
-        System.out.println("\nSUCCESS: sorting in descending order.");
-        for (int i = 0; i < mainArray.length - 1; i++) {
-            if (mainArray[i] < mainArray[i + 1]) {
-                int temp = mainArray[i + 1];
-                mainArray[i + 1] = mainArray[i];
-                mainArray[i] = temp;
-            }
-        }
-        int temp = mainArray[1];
-        mainArray[1] = mainArray[0];
-        mainArray[0] = temp;
-    }
-
-    public void sequentialSearch(int target) {
-        int isFound = 0;
-        for (int i = 0; i < mainArray.length; i++) {
-            if (mainArray[i] == target) {
-                isFound = 1;
-                break;
-            }
-        }
-        if (isFound == 1) {
-            System.out.println("\nSUCCESS: target(" + target + ") found in mainArray[].");
-        } else {
-            System.out.println("\nERROR: target(" + target + ") not found in mainArray[].");
-        }
-    }
-
-    public void binarySearch(int target) {
-        //
     }
 
     private int[] shiftRight(int[] inputArray, int tailPointer) {
