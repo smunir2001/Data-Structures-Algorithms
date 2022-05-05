@@ -1,82 +1,74 @@
 # Singly Linkedlist (C Implementation)
 
 ## Member variables
-* int[] mainArray
-    * Our program's global array to be initialized and image static length/size properties.
-    * Default value = null
+* SinglyLLNode *head
+    * Our program's global pointer to the head node of the singly linkedlist.
+    * Default value = NULL
     * Full CRUD implementation.
-* int tailPointer
-    * Counter variable to keep track of tail index and allows us to determine if the mainArray[] is full or not.
-    * Default value = -1
 ---
-## public functions/methods
-### *public __StaticArrayDS__(int inputLength)*
-* If the inputLength <= 0, then we cannot initialize mainArray[] & report an ERROR.
-* Else: initialize mainArray[] to inputLength & increment tailPointer++.
-
+## Functions/methods
 ### *public void __insertAtHead__(int data)*
-* This function takes the specified data and inserts it at the beginning (head) of the mainArray[].
-    * If the mainArray is uninitialized/null, then we cannot __insertAtHead()__ & report an ERROR.
-    * Else: we are dealing with an initialized mainArray[]. However, we need to confirm/verify if there is enough space to __insertAtHead()__.
-        * Check if the mainArray[]'s capacity is full.
-        * If the tailPointer has not reached the end of the mainArray[] (tailPointer == mainArray.length), then __shiftRight()__ each element and insert data at mainArray[0] & increment tailPointer++.
-* __Time complexity:__ O(n) --> linear time
-    * This function will require shifting elements at most n - 1 times if we want to __insertAtHead()__ and have a vacant index for the new head element. If we are dealing with single-element arrays, then no shifting is required which results in a constant time O(1) insertion operation.
+* This function takes the specified data and inserts it at the beginning (head node) of the singly linkedlist.
+    * If the singly linkedlist is uninitialized/NULL, then we will create a new head node and initialize its members:
+        * newHead -> data = data
+        * newHead -> next = NULL
+        * We will then set head as the newHead of our linkedlist.
+    * Else: we are dealing with an initialized singly linkedlist and we can still __insertAtHead()__ which means there currently is a head node.
+        * So we will, this time, create a new head node and initialize its memebers in this manner:
+            * newHead -> data = data;
+            * newHead -> next = head;
+            * And now we will set our head as the newHead of our linkedlist.
+* __Time complexity:__ O(1) --> constant time
+    * This function will simply use the reference to our head node and perform the same number of operations independent on the number of nodes in our singly linkedlist.
+        1. Initializing newHeadNode member variables (data & next).
+        2. Assigning head to be the newHeadNode.
 
 ### *public void __removeFromHead__()*
-* This function removes the element at the beginning (head) position of the mainArray[].
-    * If the mainArray is uninitialized/null OR tailPointer == -1, then we cannot __removeFromHead()__ & report an ERROR.
-        * If tailPointer == 0, then we cannot __removeFromHead()__ from empty mainArray so return ERROR.
-        * Else: We will __shiftLeft()__ to overwrite head element and decrement the tailPointer--.
-* __Time complexity:__ O(n) --> linear time
-    * This function will require shifting elements at most n - 1 times if we want to remove from the head and maintain proper arrangement of elements inside mainArray[]. If we are dealing with single-element arrays, it will require no shifting of elements and execute in O(1) constant time.
-
-### *public void __insertAtTail__(int data)*
-* This function takes the specified data and inserts it at the end (tail) of the mainArray[].
-* If the mainArray is uninitialized/null OR tailPointer == -1, then we cannot __insertAtTail()__ & report an ERROR.
-    * Else: we will check if the mainArray[]'s capacity is full.
-    * If there is enough space to insert an element at the tail, then mainArray[tailPointer] = data & increment tailPointer++.
+* This function removes the element at the beginning (head node) position of the singly linkedlist.
+    * If the singly linkedlist is uninitialized/NULL, then we cannot __removeFromHead()__ & report an ERROR.
+    * If there does exist a head node (singly linkedlist != NULL), then we will simply set head = head -> next
+        * This will remove the head node from our singly linkedlist.
 * __Time complexity:__ O(1) --> constant time
-    * We already have a pointer variable to the tail element/position, so as long as tail != mainArray.length (out of bounds), we can insert the specified data in the tail position in constant time.
+    * This function will simply use the reference to our head node and perfrom the same number of operations independent on the number of nodes in our singly linkedlist.
+        1. Checking if the singly linkedlist is NULL.
+        2. Assigning head to the next node.
 
-### *public void __removeFromTail__()*
-* This function removes the element at the end (tail) of the mainArray[].
-* If the mainArray is uninitialized/null OR tailPointer == -1, then we cannot __removeFromTail()__ & report an ERROR.
-    * Else: Check if the mainArray[] is already empty (tailPointer == 0) & report an ERROR.
-    * If mainArray[] is not empty, set mainArray[tailPointer - 1] = 0 & decrement tailPointer--.
-* __Time complexity:__ O(1) --> constant time
-    * We already have a pointer variable to the tail element/position, so it is easy to locate and decrement tailPointer and "delete" the element at the tail position in constant time.
+### *void __insertAtTail__(int data)*
+* This function takes the specified data and inserts it at the end (tail node) of the singly linkedlist.
+    * If the singly linkedlist is uninitialized/NULL, then we will create a new tail node and initialize its members:
+        * newHead -> data = data
+        * newHead -> next = NULL
+        * We will then set the head reference to our newTailNode.
+            * head = newTailNode
+    * Else: we are dealing with an initialized singly linkedlist and we can still __insertAtHead()__ which means there currently is a head node.
+        * So we will, this time, create a new head node and initialize its memebers in this manner:
+            * newHead -> data = data;
+            * newHead -> next = NULL;
+            * We will then have to traverse from the head node to the last node and set its next reference to the new tail node.
+                * currentNode.next = newTailNode
+* __Time complexity:__ O(n) --> linear time
+    * This function will have to traverse the linkedlist to the tail node so that we can __insertAtTail()__. This would always require traversing n nodes in the worst case scenario resulting in a linear-time operation.
 
-### *public void __printArray__()*
-* This function will print out each element in the mainArray[] sequentially.
+### *void __removeFromTail__()*
+* This function removes the element at the end (tail node) position of the singly linkedlist.
+    * If the singly linkedlist is uninitialized/NULL, then we cannot __removeFromTail()__ & report an ERROR.
+    * If there does exist a head node (singly linkedlist != NULL), then we will have to traverse from the head node to the 2nd to last tail node and set that node's next pointer to NULL.
+        * currentNode -> next = NULL
+        * This will remove the tail node from our singly linkedlist.
 * __Time complexity:__ O(n) --> linear time
-    * Sequential traversal of mainArray[] to access each element results in a linear time O(n) operation.
----
-## private functions/methods
-### *private int[] __shiftRight__(int[] inputArray, int tailPointer)*
-* This function takes the inputArray[] and the current value of the tailPointer and it will return the inputArray[] such that each data item is shifted one space to the right.
-* If tailPointer == 1, then we will only swap the first two elements.
-    * Else: we will shift all elements one space to the right & set mainArray[0] = 0.
-* __Time complexity:__ O(n) --> linear time
-    * The tailPointer is incremented every time we __insertAtHead()__ or __insertAtTail()__ and this function will shift every element in the mainArray[] one space to the right up until the value of tailPointer. So when tailPointer == mainArraySize, we will have done at most n - 1 swaps! Hence, resulting in O(n - 1) or O(n) time complexity.
+    * This function will have to traverse the linkedlist to the 2nd to last tail node so that we can __removetAtTail()__. This would always require traversing n nodes in the worst case scenario resulting in a linear-time operation.
 
-### *private int[] __shiftLeft__(int[] inputArray, int tailPointer)*
-* This function takes the inputArray[] and the current value of the tailPointer and it will return the inputArray[] such that each data item is shifted one space to the left.
-* If tailPointer == 1, then we will simply set mainArray[0] = 0.
-    * Else: we will shift elements one space to the left & set inputArray[tailPointer - 1] = 0.
+### *void __printSinglyLinkedlist__()*
+* This function will print out each node -> data in the singly linkedlist sequentially.
 * __Time complexity:__ O(n) --> linear time
-    * The tailPointer is decremented every time we __removeFromHead()__ or __removeFromTail()__ and this function will shift every element in the mainArray[] one space to the left up until the value of the tailPointer. So when tailPointer == mainArraySize, we will have done at most n - 1 swaps! Hence, resulting in O(n - 1) or O(n) time complexity.
+    * Sequential traversal of singly linkedlist to access each node results in a linear-time O(n) operation.
 ---
 ## Common concepts
-### How to check if the mainArray[] is uninitialized?
-```java
-if (mainArray == null || tailPointer == -1)
+### How to check if the singly linkedlist is uninitialized?
+```C
+if (head == NULL)
 ```
 ### How to check if the mainArray[] is empty?
-```java
-if (tailPointer == 0)
-```
-### How to check if the mainArray[] is full?
-```java
-if (tailPointer == mainArray.length)
+```C
+if (head == NULL)
 ```
