@@ -12,11 +12,10 @@ public class SinglyLinkedlistDS {
     }
 
     public void insertAtHead(int data) {
+        System.out.println("\nSUCCESS: insertingAtHead(" + data + ") in singly linkedlist.");
         if (head == null) {
-            System.out.println("\nSUCESS: insertingAtHead(" + data + ") in singly linkedlist.");
             head = new SinglyLLNode(data, null);
         } else {
-            System.out.println("\nSUCESS: insertingAtHead(" + data + ") in singly linkedlist.");
             SinglyLLNode newHead = new SinglyLLNode(data, head);
             head = newHead;
         }
@@ -32,11 +31,10 @@ public class SinglyLinkedlistDS {
     }
 
     public void insertAtTail(int data) {
+        System.out.println("\nSUCCESS: insertingAtTail(" + data + ") in singly linkedlist.");
         if (head == null) {
-            System.out.println("\nSUCCESS: insertingAtTail(" + data + ") in singly linkedlist.");
             head = new SinglyLLNode(data, null);
         } else {
-            System.out.println("\nSUCCESS: insertingAtTail(" + data + ") in singly linkedlist.");
             SinglyLLNode currentNode = head;
             while (currentNode != null && currentNode.getNext() != null) {
                 currentNode = currentNode.getNext();
