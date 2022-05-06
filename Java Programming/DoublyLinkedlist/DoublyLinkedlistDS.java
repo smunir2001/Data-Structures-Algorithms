@@ -65,20 +65,6 @@ public class DoublyLinkedlistDS {
         }
     }
 
-    // public void removeFromTail() {
-    //     if (head == null) {
-    //         System.out.println("\nERROR: cannot removeFromTail() from empty doubly linkedlist.");
-    //     } else {
-    //         System.out.println("\nSUCCESS: removingFromTail(" + tail.getData() + ") from doubly linkedlist.");
-    //         if (tail.getPrevious() == null) {
-    //             head.setNext(null);
-    //         } else {
-    //             tail = tail.getPrevious();
-    //             tail.setNext(null);
-    //         }
-    //     }
-    // }
-
     public void removeFromTail() {
         if (head == null) {
             System.out.println("\nERROR: cannot removeFromTail() from empty doubly linkedlist.");

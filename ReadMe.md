@@ -41,10 +41,10 @@ array2.insertionSort();
     * Singly linkedlists (Java)
     * Singly linkedlists (C)
     * Doubly linkedlists (Java)
+    * Doubly linkedlists (C)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
-    * Doubly linkedlists
     * Circular linkedlists
 * Stacks
     * Stack using array
