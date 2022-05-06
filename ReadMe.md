@@ -37,9 +37,10 @@ array2.insertionSort();
     * Static arrays (C)
     * Dynamic arrays (Java)
     * Dynamic arrays (C)
-* Linkedlists ***need to complete write-up & ReadMe
+* Linkedlists
     * Singly linkedlists (Java)
     * Singly linkedlists (C)
+    * Doubly linkedlists (Java)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
