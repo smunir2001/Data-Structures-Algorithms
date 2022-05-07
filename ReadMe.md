@@ -42,13 +42,15 @@ array2.insertionSort();
     * Singly linkedlists (C)
     * Doubly linkedlists (Java)
     * Doubly linkedlists (C)
+* Stacks
+    * Stack using array (Java)
+    * Stack using array (C)
+    * Stack using linkedlist (Java)
+    * Stack using linkedlist (C)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
     * Circular linkedlists
-* Stacks
-    * Stack using array
-    * Stack using linkedlist
 * Queues
     * Queue using array
     * Queue using linkedlist
