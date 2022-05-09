@@ -50,6 +50,7 @@ array2.insertionSort();
 * Queues
     * Queue using array (Java)
     * Queue using array (C)
+    * Queue using linkedlist (Java)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
@@ -58,14 +59,19 @@ array2.insertionSort();
     * Queue using linkedlist
 * Hashtables
 * Trees
+     * Binary tree
+     * Binary search tree
+     * N-ary tree
 * Heaps
 * Graphs
+    * Adjacency matrix
+    * Adjacency linkedlist
 
 ## Completed Searching Algo
 * Linear search (Java)
 * Binary search (Java)
 
-## Need-to-Complete Searching Algo
+## ~~Need-to-Complete Searching Algo~~
 
 ## Completed Sorting Algo
 * Bubble sort (Java)
