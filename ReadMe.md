@@ -47,6 +47,8 @@ array2.insertionSort();
     * Stack using array (C)
     * Stack using linkedlist (Java)
     * Stack using linkedlist (C)
+* Queues
+    * Queue using array (Java)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
