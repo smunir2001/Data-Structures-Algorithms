@@ -27,7 +27,7 @@ public class ArrayQueueDS {
 
     public void peek() {
         if (mainQueue == null) {
-            System.out.println("ERROR: cannot peek() front of queue.");
+            System.out.println("ERROR: cannot peek() front of mainQueue.");
         } else {
             System.out.println("SUCCESS: mainQueue.peek() --> " + mainQueue[0]);
         }
