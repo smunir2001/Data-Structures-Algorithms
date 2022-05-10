@@ -51,12 +51,11 @@ array2.insertionSort();
     * Queue using array (Java)
     * Queue using array (C)
     * Queue using linkedlist (Java)
+    * Queue using linkedlist (C)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
     * Circular linkedlists
-* Queues
-    * Queue using linkedlist
 * Hashtables
 * Trees
      * Binary tree
