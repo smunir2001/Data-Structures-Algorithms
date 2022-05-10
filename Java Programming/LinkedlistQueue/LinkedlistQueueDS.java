@@ -9,7 +9,6 @@ public class LinkedlistQueueDS {
         System.out.println("Successfully initialized linkedlist queue object.");
     }
 
-    // we will insert at the tail...
     public void enqueue(int data) {
         System.out.println("\nSUCCESS: enqueue(" + data + ") into linkedlist queue.");
         if (head == null) {
@@ -24,7 +23,6 @@ public class LinkedlistQueueDS {
         }
     }
     
-    // we will peek the head of the LL
     public void peek() {
         if (head == null) {
             System.out.println("ERROR: cannot peek() at front of empty/null linkedlist queue.");
@@ -33,7 +31,6 @@ public class LinkedlistQueueDS {
         }
     }
 
-    // we will peek & remove from the head of the linked list.
     public void dequeue() {
         if (head == null) {
             System.out.println("\nERROR: cannot dequeue() from empty/null linkedlist queue.");
