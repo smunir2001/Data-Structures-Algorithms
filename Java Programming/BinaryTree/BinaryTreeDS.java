@@ -61,7 +61,6 @@ public class BinaryTreeDS {
     }
 
     public void doesContain(int target) {
-        // BFS to search if target element exists in BT.. return true/false
         if (root == null) {
             System.out.println("\nERROR: cannot search for target element in empty/null binary tree.");
         } else {
@@ -87,6 +86,27 @@ public class BinaryTreeDS {
             } else {
                 System.out.println("\nERROR: target element(" + target + ") not found in binary tree.");
             }
+        }
+    }
+
+    public void sumNodeVals() {
+        if (root == null) {
+            System.out.println("\nERROR: cannot get sum of nodes from empty/null binary tree.");
+        } else {
+            DFSLLStack dfsStack = new DFSLLStack();
+            dfsStack.push(root);
+            int sumOfNodeVals = 0;
+            while (dfsStack.isEmpty() != true) {
+                LLStackNode currentNode = dfsStack.pop();
+                sumOfNodeVals += currentNode.getNode().getData();
+                if (currentNode.getNode().getLeft() != null) {
+                    dfsStack.push(currentNode.getNode().getLeft());
+                }
+                if (currentNode.getNode().getRight() != null) {
+                    dfsStack.push(currentNode.getNode().getRight());
+                }
+            }
+            System.out.println("\nSUCCESS: sum of nodes in binary tree = " + sumOfNodeVals + ".");
         }
     }
 }

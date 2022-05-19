@@ -29,5 +29,6 @@ public class Main {
         bT1.doesContain(3);
         bT1.doesContain(6);
         bT1.doesContain(0);
+        bT1.sumNodeVals();
     }
 }
