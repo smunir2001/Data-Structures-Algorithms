@@ -89,9 +89,9 @@ public class BinaryTreeDS {
         }
     }
 
-    public void sumNodeVals() {
+    public void treeSum() {
         if (root == null) {
-            System.out.println("\nERROR: cannot get sum of nodes from empty/null binary tree.");
+            System.out.println("\nERROR: cannot get tree sum of empty/null binary tree.");
         } else {
             DFSLLStack dfsStack = new DFSLLStack();
             dfsStack.push(root);
@@ -106,7 +106,30 @@ public class BinaryTreeDS {
                     dfsStack.push(currentNode.getNode().getRight());
                 }
             }
-            System.out.println("\nSUCCESS: sum of nodes in binary tree = " + sumOfNodeVals + ".");
+            System.out.println("\nSUCCESS: tree sum of binary tree = " + sumOfNodeVals + ".");
+        }
+    }
+
+    public void treeMin() {
+        if (root == null) {
+            System.out.println("\nERROR: cannot get minimum value of empty/null binary tree.");
+        } else {
+            BFSLLQueue bfsQueue = new BFSLLQueue();
+            bfsQueue.enqueue(root);
+            int currentMin = Integer.MAX_VALUE;
+            while (bfsQueue.isEmpty() != true) {
+                LLQueueNode currentNode = bfsQueue.dequeue();
+                if (currentNode.getNode().getData() < currentMin) {
+                    currentMin = currentNode.getNode().getData();
+                }
+                if (currentNode.getNode().getLeft() != null) {
+                    bfsQueue.enqueue(currentNode.getNode().getLeft());
+                }
+                if (currentNode.getNode().getRight() != null) {
+                    bfsQueue.enqueue(currentNode.getNode().getRight());
+                }
+            }
+            System.out.println("\nSUCCESS: minimum value of binary tree = " + currentMin + ".");
         }
     }
 }
