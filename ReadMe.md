@@ -52,6 +52,8 @@ array2.insertionSort();
     * Queue using array (C)
     * Queue using linkedlist (Java)
     * Queue using linkedlist (C)
+* Trees
+    * Binary tree (Java)
 
 ## Need-to-Complete Data Structure & Algorithms
 * Linkedlists
