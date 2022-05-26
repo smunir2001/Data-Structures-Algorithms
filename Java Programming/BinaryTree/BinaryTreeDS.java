@@ -132,4 +132,16 @@ public class BinaryTreeDS {
             System.out.println("\nSUCCESS: minimum value of binary tree = " + currentMin + ".");
         }
     }
+
+    // max path length from root --> leaf
+    public int maxPathSum(BTNode inputRoot) {
+        if (inputRoot == null) return Integer.MIN_VALUE;
+        if (inputRoot.getLeft() == null && inputRoot.getRight() == null) {
+            return inputRoot.getData();
+        }
+        int leftChildPathSum = maxPathSum(inputRoot.getLeft());
+        int rightChildPathSum = maxPathSum(inputRoot.getRight());
+        int maxChildPathSum = Math.max(leftChildPathSum, rightChildPathSum);
+        return inputRoot.getData() + maxChildPathSum;
+    }
 }

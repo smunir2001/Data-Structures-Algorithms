@@ -30,6 +30,7 @@ public class Main {
         bT1.doesContain(0);
         bT1.treeSum();
         bT1.treeMin();
+        System.out.println("\nSUCCESS: maxPathSum = " + bT1.maxPathSum(a) + ".");
 
         // Binary Tree (2)
         System.out.println("\n------------------------------");
@@ -59,5 +60,6 @@ public class Main {
         bT2.doesContain(22);
         bT2.treeSum();
         bT2.treeMin();
+        System.out.println("\nSUCCESS: maxPathSum = " + bT2.maxPathSum(a2) + ".");
     }
 }
